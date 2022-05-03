@@ -9,13 +9,13 @@ import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class CourseService {
+export class CafesService {
   //9. Binding con enviroment ----> cafe.component.ts
-  private apiUrl = environment.baseUrl + 'cafes.json';
+  private apiUrl = environment.baseUrl + '202212_MISW4104_Grupo3.json';
 
   constructor(private http: HttpClient) { }
 
-  getCourses(): Observable<Cafes[]> {
+  getCafes(): Observable<Cafes[]> {
     return this.http.get<Cafes[]>(this.apiUrl);
   }
 }

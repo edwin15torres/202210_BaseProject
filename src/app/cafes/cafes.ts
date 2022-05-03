@@ -6,8 +6,8 @@ export class Cafes {
   tipo: string;
   region: string;
 
-  public constructor(idd: number, nombre: string, tipo: string, region: string) {
-    this.id = idd;
+  public constructor(id: number, nombre: string, tipo: string, region: string) {
+    this.id = id;
     this.nombre = nombre;
     this.tipo = tipo;
     this.region = region;
@@ -16,4 +16,4 @@ export class Cafes {
  }
 
 
- //** */ Binding course.component.ts
+ //** */ Binding cafes.component.ts

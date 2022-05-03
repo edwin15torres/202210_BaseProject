@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-//7. Importar modelo de datos
 import { Cafes } from './cafes';
-import { dataCafes } from './datacafes';
+//import { dataCafes } from './dataCafes';
+//10. .import servicio
+import { CafesService } from './cafes.service';
+
 
 @Component({
   selector: 'app-cafes',
@@ -9,16 +11,21 @@ import { dataCafes } from './datacafes';
   styleUrls: ['./cafes.component.css']
 })
 export class CafesComponent implements OnInit {
-    // 7.1. Instanciar la clase
-    cafes: Array<Cafes> =[];
-  constructor() { }
-   // 7.2. añadir un método get
-   getCafesList(): Array<Cafes> {
-    return dataCafes;
+  // 10.1 Cambiar origen sel servicio --ir al mod. princ.
+
+  constructor(private cafesService: CafesService) { }
+  cafes: Array<Cafes> =[];
+
+  //getCafesList(): Array<Cafes> {
+   // return dataCafes;}
+
+   getCafes() {
+    this.cafesService.getCafes().subscribe(cafes => {
+      this.cafes = cafes;
+    });
   }
-  // 7.3 declarar la lista -- Crear un servicio
   ngOnInit() {
-    this.cafes = this.getCafesList();
+    this.getCafes();
   }
 
 }
