@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class CourseService {
-  //9. Binding con enviroment ----> course.component.ts
+  //9. Binding con enviroment ----> cafe.component.ts
   private apiUrl = environment.baseUrl + 'cafes.json';
 
   constructor(private http: HttpClient) { }

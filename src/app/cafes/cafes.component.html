@@ -1,5 +1,39 @@
  <!-- 5. Por default se crear el msg -->
   <!-- DEFINIR EL MODELO -->
-<p>
-  cafes works!
-</p>
+
+  <!-- 6.3 Estructura tabla del modulo funcional -->
+
+
+  <body>
+    <div class="container-fluid">
+      <div class="col-6">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th class="table-dark">#</th>
+              <th class="table-dark">Nombre</th>
+              <th class="table-dark">Tipo</th>
+              <th class="table-dark">Region</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let c of cafes">
+              <td>
+                <dd >{{c.id}}</dd>
+              </td>
+              <td>
+                <dd>{{c.nombre}}</dd>
+              </td>
+              <td>
+                <dd>{{c.tipo}}</dd>
+              </td>
+              <td>
+                <dd>{{c.region}}</dd>
+              </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </body>
