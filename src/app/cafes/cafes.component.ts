@@ -4,7 +4,6 @@ import { Cafes } from './cafes';
 //10. .import servicio
 import { CafesService } from './cafes.service';
 
-
 @Component({
   selector: 'app-cafes',
   templateUrl: './cafes.component.html',
