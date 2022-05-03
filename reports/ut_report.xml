@@ -1,7 +1,24 @@
 <testExecutions version="1">
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="118"/>
-    <testCase name="AppComponent should create the app" duration="14"/>
-    <testCase name="AppComponent should render title" duration="13"/>
+    <testCase name="AppComponent should have as title 'Practica_1'" duration="829">
+      <failure message="Error">Error: Expected 'base-project' to equal 'Practica_1'.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:37:23)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+</failure>
+    </testCase>
+    <testCase name="AppComponent should render title" duration="36">
+      <failure message="Error">Error: Expected undefined to contain 'Practica_1 app is running!'.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:44:66)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+</failure>
+    </testCase>
+    <testCase name="AppComponent should create the app" duration="18"/>
+  </file>
+  <file path="src/app/cafes/cafes.service.spec.ts">
+    <testCase name="Service: Course should ..." duration="7"/>
   </file>
 </testExecutions>
