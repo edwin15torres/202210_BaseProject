@@ -14,6 +14,8 @@ export class CafesComponent implements OnInit {
 
   constructor(private cafesService: CafesService) { }
   cafes: Array<Cafes> =[];
+  totalBlend: number = 0;
+  totalOrigen: number = 0;
 
   //getCafesList(): Array<Cafes> {
    // return dataCafes;}
@@ -21,10 +23,16 @@ export class CafesComponent implements OnInit {
    getCafes() {
     this.cafesService.getCafes().subscribe(cafes => {
       this.cafes = cafes;
+      this.totalBlend = cafes.filter(x=>x.tipo=="Blend").length;
+      this.totalOrigen = cafes.filter(x=>x.tipo=="Café de Origen").length;
     });
+
   }
   ngOnInit() {
     this.getCafes();
   }
 
+
 }
+
+console.log(Cafes);
